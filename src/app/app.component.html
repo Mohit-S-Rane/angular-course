@@ -1,4 +1,17 @@
-<h1>App Component</h1>
-<h1>Material Button</h1>
-<button mat-raised-button color="primary">Click Button</button>
-<mat-chip >Orange</mat-chip>
+<div class="overlay" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="40px">
+    <img src="../assets/digiresume-green.png" alt="logo_symbol" width="20%">
+    <mat-card fxLayout="column">
+        <h2>Login</h2>
+        <mat-form-field>
+            <input type="email" matInput placeholder="Email" />
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Password" />
+        </mat-form-field>
+        <a href="#">Forgot Password</a>
+        <div fxLayout="row" style="margin-top: 2rem;" fxLayoutGap="20px" fxLayoutAlign="end">
+            <button color="primary" mat-raised-button>Login</button>
+            <button color="accent" mat-raised-button>Signup</button>
+        </div>
+    </mat-card>
+</div>

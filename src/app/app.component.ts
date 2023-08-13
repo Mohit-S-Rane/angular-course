@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+  loginForm: FormGroup;
+
+  constructor(){
+    this.loginForm = new FormGroup({
+      email: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required])
+    })
+  }
 }

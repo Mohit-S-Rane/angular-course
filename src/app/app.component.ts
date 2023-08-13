@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { filter, map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'angular-course';
   loginForm: FormGroup
-  myObserver: Observable<any>
 
   constructor() {
     this.loginForm = new FormGroup({
@@ -20,18 +19,24 @@ export class AppComponent {
   }
 
   login() {
-    this.myObserver = new Observable((emitter) => {
-      emitter.next(this.loginForm.value)
-    })
+    // using Map Operator
+    // const mapObserver = this.loginForm.valueChanges.pipe(map(data => {
+    //   return data.email
+    // }))
 
-    this.myObserver.subscribe((data) => {
-      console.log(data);
-    })
+    // mapObserver.subscribe((data) => {
+    //   console.log(data);
+    // })
+
+    // using Filter Operator
+    // const filterObserver = this.loginForm.valueChanges.pipe(filter(data => data.email === 'abc@gmail.com'
+    // ))
+
+    // filterObserver.subscribe(data =>{
+    //   console.log(data);
+    // })
+
   }
 
-  signup() {
-    this.myObserver.subscribe((data) => {
-      console.log(data);
-    })
-  }
+  signup() { }
 }

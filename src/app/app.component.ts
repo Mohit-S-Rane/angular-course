@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { filter, map, Observable } from 'rxjs';
+import { filter, map, Observable, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -16,26 +16,40 @@ export class AppComponent {
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.maxLength(8), Validators.minLength(2)])
     })
+    this.buySugarFromShop()
   }
 
+  buySugerInBulk () {
+    return new Observable(emitter => {
+      emitter.next('Sugar is purchased..')
+    })
+  }
+
+  buySugarInQuantity(quantity:any) {
+    return new Observable(emitter => {
+      emitter.next('Sugar with Quantity: ' + quantity + ' is here for you')
+    })
+  }
+
+  buySugarFromShop(){
+    const newObserver = this.buySugerInBulk().pipe(switchMap(()=> {
+      return this.buySugarInQuantity('1kg')
+    }))
+  
+    newObserver.subscribe((data)=>{
+      console.log(data);
+      
+    })
+  
+  
+  }
+
+
+
+
+
+
   login() {
-    // using Map Operator
-    // const mapObserver = this.loginForm.valueChanges.pipe(map(data => {
-    //   return data.email
-    // }))
-
-    // mapObserver.subscribe((data) => {
-    //   console.log(data);
-    // })
-
-    // using Filter Operator
-    // const filterObserver = this.loginForm.valueChanges.pipe(filter(data => data.email === 'abc@gmail.com'
-    // ))
-
-    // filterObserver.subscribe(data =>{
-    //   console.log(data);
-    // })
-
   }
 
   signup() { }

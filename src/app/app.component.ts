@@ -8,12 +8,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'angular-course';
-  loginForm: FormGroup;
+  loginForm: FormGroup
 
   constructor(){
     this.loginForm = new FormGroup({
-      email: new FormControl(null, [Validators.required]),
-      password: new FormControl(null, [Validators.required])
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      password: new FormControl(null, [Validators.required, Validators.maxLength(8), Validators.minLength(2)])
     })
+  }
+
+  login(){
+    console.log("Called");
+    
   }
 }

@@ -12,25 +12,25 @@
             <mat-error>(2-8) Digit password is required</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input formControlName="confirm_password" matInput placeholder="Password" />
-            <mat-error>(2-8) Digit password is required</mat-error>
+            <input type="text" formControlName="confirm_password" matInput placeholder="Password" />
+            <mat-error>Confirm Password is required</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" formControlName="name" matInput placeholder="name" />
-            <mat-error>Confirm password is required</mat-error>
+            <input type="text" formControlName="name" matInput placeholder="name" />
+            <mat-error>Name is required</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" formControlName="job_category" matInput placeholder="job_category" />
+            <input type="text" formControlName="job_category" matInput placeholder="job_category" />
             <mat-error>Job Category is required</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" formControlName="experience_level" matInput placeholder="experience_level" />
-            <mat-error>Experience Letter is required</mat-error>
+            <input type="text" formControlName="experience_level" matInput placeholder="experience_level" />
+            <mat-error>Experience Level is required</mat-error>
         </mat-form-field>
-        <a href="#" style="margin-top: 2rem; color: whitesmoke;">Forgot Password</a>
+        <!-- <a href="#" style="margin-top: 2rem; color: whitesmoke;">Forgot Password</a> -->
         <div fxLayout="row" style="margin-top: 2rem;" fxLayoutGap="20px" fxLayoutAlign="end">
-            <button type="submit" color="primary" mat-raised-button>Signup</button>
             <button (click)="backToLogin()" type="button" color="accent" mat-raised-button>Go back to Login</button>
+            <button type="submit" color="primary" mat-raised-button>Signup</button>
         </div>
         <mat-spinner *ngIf="this.loading" diameter="40" color="accent"></mat-spinner>
     </mat-card>

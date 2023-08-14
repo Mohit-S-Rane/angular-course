@@ -20,6 +20,10 @@ export class HttpService {
         return this.httpClient.post(this.baseURL + url, body).pipe(catchError(this.errorHandler.bind(this)))
     }
 
+    patch(url: string, body: any): Observable<any>{
+        return this.httpClient.patch(this.baseURL + url, body).pipe(catchError(this.errorHandler.bind(this)))
+    }
+
     private errorHandler(response: any) {
         const error = response.error
         const keys = Object.keys(error);

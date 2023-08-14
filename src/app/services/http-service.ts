@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError } from "rxjs";
+import { catchError, Observable } from "rxjs";
 import { AlertService } from "./alert-service";
 import { throwError } from "rxjs";
 
@@ -11,12 +11,12 @@ export class HttpService {
     constructor(private httpClient: HttpClient, private alertService: AlertService) {
     }
 
-    get(url: string, paramData?: any) {
+    get(url: string, paramData?: any): Observable<any> {
         const data = { params: paramData }
         return this.httpClient.get(this.baseURL + url, data).pipe(catchError(this.errorHandler.bind(this)))
     }
 
-    post(url: string, body: any){
+    post(url: string, body: any): Observable<any>{
         return this.httpClient.post(this.baseURL + url, body).pipe(catchError(this.errorHandler.bind(this)))
     }
 

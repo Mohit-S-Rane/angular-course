@@ -16,6 +16,7 @@ import { SignupComponent } from './container/signup/signup.component';
 import { ForgotPasswordComponent } from './container/forgot-password/forgot-password.component';
 import { VerificationComponent } from './container/verification/verification.component';
 import { AuthGuard } from './guards/auth-guard';
+import { AnonGuard } from './guards/anon-guard';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { AuthGuard } from './guards/auth-guard';
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [HttpService, ApiService, AlertService, AuthGuard],
+  providers: [HttpService, ApiService, AlertService, AuthGuard, AnonGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

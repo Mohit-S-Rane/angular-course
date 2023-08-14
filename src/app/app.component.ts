@@ -23,7 +23,9 @@ export class AppComponent {
       this.alertService.success('done!')
 
     }, error=>{
-      this.alertService.error(error.message)
+      console.log(error, 'app component');
+      
+      // this.alertService.error(error.message)
     })
   }
 

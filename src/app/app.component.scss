@@ -8,6 +8,11 @@ button {
 }
 
 mat-card {
-  height: 20rem;
-  width: 25rem;
+  height: 25rem;
+  width: 20rem;
+}
+
+mat-spinner {
+  align-self: center;
+  margin-top: 1rem;
 }

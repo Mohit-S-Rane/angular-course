@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertService } from './services/alert-service';
 import { ApiService } from './services/api-service';
 
 @Component({
@@ -13,17 +14,17 @@ export class AppComponent {
 
   // my component => api service => http service => http client
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private alertService: AlertService) {
     this.loginForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.maxLength(8), Validators.minLength(2)])
     })
     this.apiService.getUsers().subscribe((data) => {
-      console.log(data);
+      this.alertService.success('done!')
 
-    }), (error: any) => {
-      console.log(error);
-    }
+    }, error=>{
+      this.alertService.error(error.message)
+    })
   }
 
   login() {

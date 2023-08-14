@@ -10,6 +10,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http-service';
 import { ApiService } from './services/api-service';
+import { AlertService } from './services/alert-service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ApiService } from './services/api-service';
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [HttpService, ApiService],
+  providers: [HttpService, ApiService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

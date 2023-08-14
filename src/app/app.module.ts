@@ -14,6 +14,8 @@ import { AlertService } from './services/alert-service';
 import { LoginComponent } from './container/login/login.component';
 import { SignupComponent } from './container/signup/signup.component';
 import { ForgotPasswordComponent } from './container/forgot-password/forgot-password.component';
+import { VerificationComponent } from './container/verification/verification.component';
+import { AuthGuard } from './guards/auth-guard';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ForgotPasswordComponent } from './container/forgot-password/forgot-pass
     VideoComponent,
     LoginComponent,
     SignupComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    VerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { ForgotPasswordComponent } from './container/forgot-password/forgot-pass
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [HttpService, ApiService, AlertService],
+  providers: [HttpService, ApiService, AlertService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

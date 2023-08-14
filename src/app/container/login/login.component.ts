@@ -31,12 +31,11 @@ export class LoginComponent {
         const request$ = this.apiService.loginAndSetToken(this.loginForm.value)
         request$.subscribe((data)=>{
           this.loading = false
-          console.log(data);
           this.alertService.success('Login Successful')
+          this.router.navigate(['verify'])
         }, (error)=>{
-          this.loading = false
           console.log(error);
-          
+          this.loading = false
         })
       }
     

@@ -5,39 +5,37 @@ import { HttpService } from "./http-service";
 
 @Injectable()
 export class ApiService {
-    private readonly authToken = 'auth token';
-    constructor(private httpService: HttpService) {
+    private static authToken = 'auth token';
+    constructor(private httpService: HttpService) { }
 
+    static getAuthToken() {
+        return localStorage.getItem(ApiService.authToken)
     }
 
-    signup(data:{email:string, password: string, confirm_password: string, name: string, job_category: string, experience_level: string}):Observable<User> {
+    static setAuthToken(value: any) {
+        localStorage.setItem(ApiService.authToken, value)
+    }
+
+    static removeAuthToken() {
+        localStorage.removeItem(ApiService.authToken)
+    }
+
+    signup(data: { email: string, password: string, confirm_password: string, name: string, job_category: string, experience_level: string }): Observable<User> {
         return this.httpService.post('/user/signup', data)
     }
 
-    loginAndSetToken(data:{email:string, password:string}): Observable<User>{
-        return this.httpService.get('/user/login', data).pipe(map((res)=>{
-            this.setAuthToken(res.token)
+    loginAndSetToken(data: { email: string, password: string }): Observable<User> {
+        return this.httpService.get('/user/login', data).pipe(map((res) => {
+            ApiService.setAuthToken(res.token)
             return res
         }))
     }
 
-    getAuthToken(){
-        return localStorage.getItem(this.authToken)
-    }
-
-    setAuthToken(value:any){
-        localStorage.setItem(this.authToken, value)
-    }
-
-    removeAuthToken(){
-        localStorage.removeItem(this.authToken)
-    }
-
-    sendResetPasswordEmail(data:{email: string}): Observable<any>{
+    sendResetPasswordEmail(data: { email: string }): Observable<any> {
         return this.httpService.get('/user/reset/password/email', data)
     }
 
-    resetPassword(data:{code: string, new_password: string, confirm_password: string}): Observable<any>{
+    resetPassword(data: { code: string, new_password: string, confirm_password: string }): Observable<any> {
         return this.httpService.get('/user/reset/password', data)
     }
 } 

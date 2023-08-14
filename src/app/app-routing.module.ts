@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ForgotPasswordComponent } from './container/forgot-password/forgot-password.component';
 import { LoginComponent } from './container/login/login.component';
 import { SignupComponent } from './container/signup/signup.component';
+import { VerificationComponent } from './container/verification/verification.component';
+import { AuthGuard } from './guards/auth-guard';
 
 const routes: Routes = [{path: 'login', component: LoginComponent},
 {path: 'signup', component: SignupComponent},
-{path: 'forgot-password', component: ForgotPasswordComponent}];
+{path: 'forgot-password', component: ForgotPasswordComponent},
+{path: 'verify', component: VerificationComponent, canActivate: [AuthGuard]}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

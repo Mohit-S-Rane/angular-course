@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './services/http-service';
+import { ApiService } from './services/api-service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

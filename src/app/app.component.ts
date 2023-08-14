@@ -19,15 +19,22 @@ export class AppComponent {
     this.loginForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.maxLength(8), Validators.minLength(2)]),
-      confirm_password: new FormControl(null, [Validators.required]),
-      name: new FormControl(null, [Validators.required]),
-      experience_level: new FormControl(null, [Validators.required]),
-      job_category: new FormControl(null, [Validators.required])
     })
   }
 
   login() {
-
+    this.loading = true
+    // Variable start with $ is indication of observables
+    const request$ = this.apiService.login(this.loginForm.value)
+    request$.subscribe((data)=>{
+      this.loading = false
+      console.log(data);
+      this.alertService.success('Login Successful')
+    }, (error)=>{
+      this.loading = false
+      console.log(error);
+      
+    })
   }
 
   signup() {

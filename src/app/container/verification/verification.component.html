@@ -1,1 +1,10 @@
-<h1>Hello i'm verfication component</h1>
+<div class="overlay" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxLayoutAlign="center center" fxFlex="100%" fxLayoutGap="30px">
+        <mat-icon inline>unsubscribed</mat-icon>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <h1>You haven't Verified your Email yet</h1>
+            <p>Please verify your email which is sent to <strong>{{email}} </strong> before continuing</p>
+        </div>
+        <button mat-raised-button color="primary">Send Email Again</button>
+    </mat-card>
+</div>

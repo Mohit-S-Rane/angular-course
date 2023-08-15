@@ -8,10 +8,12 @@
     margin-left: 5rem !important;
     font-size: 6rem !important;
     color: #16cb99;
+    margin-top: 2rem !important;
   }
 
   h1 {
     font-weight: bold;
+    text-align: center;
     font-size: 1.8rem;
   }
 
@@ -29,7 +31,6 @@
   }
 
   mat-card {
-    max-width: 40% !important;
-    max-height: 50% !important;
+    max-width: 80% !important;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px 10px inset !important;
   }

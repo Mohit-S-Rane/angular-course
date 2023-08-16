@@ -7,10 +7,17 @@ import { AuthUtils } from "../utility/auth-utils";
 
 export class AnonGuard implements CanActivate {
     constructor(private route: Router) {
-
     }
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-        return !AuthUtils.getAuthToken()
+        if(!AuthUtils.getAuthToken()){
+            return true
+        } else {
+            // Conditions to navigate after login
+                // if verified: false -> verify
+                // verified: true & onboarding: 0 -> onboarding
+                // verified: true & onboarding: 200 -> dashboard
+            this.route.navigate(['verify'])
+        }
         // return ApiService.getAuthToken() ? this.route.navigate(['verify']) : true
     }
 }

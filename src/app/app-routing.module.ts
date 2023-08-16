@@ -7,6 +7,7 @@ import { VerificationComponent } from './container/verification/verification.com
 import { AnonGuard } from './guards/anon-guard';
 import { AuthGuard } from './guards/auth-guard';
 import { OnBoardingComponent } from './container/on-boarding/on-boarding.component';
+import { DashboardComponent } from './container/layout/dashboard/dashboard.component';
 
 // const routes: Routes = [{path: 'login', component: LoginComponent, canActivate: [AnonGuard]},
 // {path: 'signup', component: SignupComponent, canActivate: [AnonGuard]},
@@ -29,6 +30,7 @@ const routes: Routes = [
     children: [
       { path: 'verify', component: VerificationComponent },
       { path: 'on-boarding', component: OnBoardingComponent },
+      { path: 'dashboard', component: DashboardComponent}
     ],
   },
 ];

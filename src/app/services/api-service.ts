@@ -38,4 +38,8 @@ export class ApiService {
     resetPassword(data: { code: string, new_password: string, confirm_password: string }): Observable<any> {
         return this.httpService.get('/user/reset/password', data)
     }
+
+    fetchMe(): Observable<User>{
+        return this.httpService.get('/user/fetch')
+    }
 } 

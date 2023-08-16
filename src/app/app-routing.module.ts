@@ -8,6 +8,10 @@ import { AnonGuard } from './guards/anon-guard';
 import { AuthGuard } from './guards/auth-guard';
 import { OnBoardingComponent } from './container/on-boarding/on-boarding.component';
 import { DashboardComponent } from './container/layout/dashboard/dashboard.component';
+import { VerificationInCompleted } from './guards/verification-in-completed';
+import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
+import { VerificationCompleted } from './guards/verification-completed';
+import { OnBoardingComplete } from './guards/on-boarding-complete';
 
 // const routes: Routes = [{path: 'login', component: LoginComponent, canActivate: [AnonGuard]},
 // {path: 'signup', component: SignupComponent, canActivate: [AnonGuard]},
@@ -28,9 +32,9 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     children: [
-      { path: 'verify', component: VerificationComponent },
-      { path: 'on-boarding', component: OnBoardingComponent },
-      { path: 'dashboard', component: DashboardComponent}
+      { path: 'verify', component: VerificationComponent, canActivate: [VerificationInCompleted] },
+      { path: 'on-boarding', component: OnBoardingComponent, canActivate: [VerificationComponent, OnBoardingInComplete]},
+      { path: 'dashboard', component: DashboardComponent, canActivate: [VerificationCompleted, OnBoardingComplete]}
     ],
   },
 ];

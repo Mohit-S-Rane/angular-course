@@ -4,6 +4,7 @@ import { catchError, Observable } from "rxjs";
 import { AlertService } from "./alert-service";
 import { throwError } from "rxjs";
 import { ApiService } from "./api-service";
+import { AuthUtils } from "../utility/auth-utils";
 
 
 @Injectable()
@@ -27,7 +28,7 @@ export class HttpService {
 
     getAuthHeaders(){
         return{
-            Authorization: `Bearer ${ApiService.getAuthToken()}`
+            Authorization: `Bearer ${AuthUtils.getAuthToken()}`
         }
     }
 

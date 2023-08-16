@@ -11,14 +11,11 @@ import { ApiService } from "src/app/services/api-service";
 
 export class VerificationComponent{
     email: string
-    constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService){
+    constructor(private activatedRoute: ActivatedRoute){
         this.fetchEmail()
     }
     
     fetchEmail(){
-        this.apiService.fetchMe().subscribe((data)=>{
-            this.email = data.email;
-        })
         const email$ = this.activatedRoute.queryParams.pipe(map((data)=> data['email']))
         email$.subscribe((data)=>{
             this.email = data

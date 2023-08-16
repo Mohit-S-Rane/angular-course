@@ -32,7 +32,7 @@ export class SignupComponent {
         this.loading = true;
         this.apiService.signup(this.loginForm.value).subscribe((data)=>{
           this.loading = false
-          this.router.navigate(['login'])
+          this.router.navigate([''])
           this.alertService.success('Signup Successful')
         }, (error)=>{
           this.loading = false
@@ -41,6 +41,6 @@ export class SignupComponent {
       }
 
       backToLogin(){
-        this.router.navigate(['login'])
+        this.router.navigate([''])
       }
 }

@@ -14,13 +14,14 @@ export class AnonGuard implements CanActivate {
             return true
         } else {
             return this.apiService.fetchMe().pipe(map((data)=>{
-                if(!data.verified){
-                    this.router.navigate(['verify'])
-                } else if(data.onboarding !== 200){
-                    this.router.navigate(['on-boarding'])
-                } else {
-                    this.router.navigate(['dashboard'])
-                }
+                this.router.navigate(['dashboard'])
+                // if(!data.verified){
+                //     this.router.navigate(['verify'])
+                // } else if(data.onboarding !== 200){
+                //     this.router.navigate(['on-boarding'])
+                // } else {
+                //     this.router.navigate(['dashboard'])
+                // }
             }))
             // this.route.navigate(['verify'])
             // Conditions to navigate after login

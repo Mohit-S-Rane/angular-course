@@ -7,13 +7,14 @@ import { map } from 'rxjs';
 export class OnBoardingComplete implements CanActivate{
     constructor(private apiService: ApiService, private router: Router){}
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-        return this.apiService.fetchMe().pipe(map((data)=>{
-            if(data.onboarding === 200) {
-                return true
-            } else {
-                this.router.navigate(['on-boarding'])
-                return false
-            }
-        }))
+        return true
+        // return this.apiService.fetchMe().pipe(map((data)=>{
+        //     if(data.onboarding === 200) {
+        //         return true
+        //     } else {
+        //         this.router.navigate(['on-boarding'])
+        //         return false
+        //     }
+        // }))
     }
 }

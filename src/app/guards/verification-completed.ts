@@ -7,13 +7,15 @@ import { map } from 'rxjs';
 export class VerificationCompleted implements CanActivate{
     constructor(private apiService: ApiService, private router: Router){}
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-        return this.apiService.fetchMe().pipe(map((data)=>{
-            if(data.verified){
-                return true
-            } else {
-                this.router.navigate(['verify'])
-                return false
-            }
-        }))
+        return true
+        // return this.apiService.fetchMe().pipe(map((data)=>{
+        //     if(data.verified){
+        //         console.log('verification completed');
+        //         return true
+        //     } else {
+        //         this.router.navigate(['verify'])
+        //         return false
+        //     }
+        // }))
     }
 }

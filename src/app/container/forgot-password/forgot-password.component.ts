@@ -47,7 +47,7 @@ export class ForgotPasswordComponent {
         observer$.subscribe((data)=>{
             this.loading = false
             console.log(data);   
-            this.router.navigate(['login'])
+            this.router.navigate([''])
             this.alertService.success('Password Updated Successfully')
         }, error =>{
             this.loading = false
@@ -57,6 +57,6 @@ export class ForgotPasswordComponent {
     }
 
     backToLogin() {
-        this.router.navigate(['login'])
+        this.router.navigate([''])
     }
 }

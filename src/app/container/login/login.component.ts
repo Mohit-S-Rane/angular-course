@@ -32,7 +32,8 @@ export class LoginComponent {
         request$.subscribe((data)=>{
           this.loading = false
           this.alertService.success('Login Successful')
-          this.router.navigate(['verify'], {queryParams: {email: data.email}})
+          // this.router.navigate(['verify'], {queryParams: {email: data.email}})
+          this.router.navigate(['dashboard'])
         }, (error)=>{
           console.log(error);
           this.loading = false

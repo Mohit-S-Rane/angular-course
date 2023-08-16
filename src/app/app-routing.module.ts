@@ -33,7 +33,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'verify', component: VerificationComponent, canActivate: [VerificationInCompleted] },
-      { path: 'on-boarding', component: OnBoardingComponent, canActivate: [VerificationComponent, OnBoardingInComplete]},
+      { path: 'on-boarding', component: OnBoardingComponent, canActivate: [VerificationCompleted, OnBoardingInComplete]},
       { path: 'dashboard', component: DashboardComponent, canActivate: [VerificationCompleted, OnBoardingComplete]}
     ],
   },

@@ -3,6 +3,7 @@ import { map, Observable } from "rxjs";
 import { User } from "../models/user";
 import { HttpService } from "./http-service";
 import { AuthUtils } from "../utility/auth-utils";
+import { Resume } from "../models/resume";
 
 @Injectable()
 export class ApiService {
@@ -27,7 +28,15 @@ export class ApiService {
         return this.httpService.get('/user/reset/password', data)
     }
 
-    fetchMe(): Observable<User>{
+    fetchMe(): Observable<User> {
         return this.httpService.get('/user/fetch')
+    }
+
+    fetchAllResumes(): Observable<Resume[]> {
+        return this.httpService.get('/resume/all');
+    }
+
+    saveResume(data: { name: string }) {
+        return this.httpService.post('/resume/add/resume', data);
     }
 } 

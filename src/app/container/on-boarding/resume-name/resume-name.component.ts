@@ -1,18 +1,19 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { ApiService } from "src/app/services/api-service";
 
 @Component({
-    selector: 'app-resume-name',
-    templateUrl: 'resume-name.component.html',
-    styleUrls: ['resume-name.component.scss']
+  selector: 'app-resume-name',
+  templateUrl: 'resume-name.component.html',
+  styleUrls: ['resume-name.component.scss']
 })
 
 export class ResumeNameComponent implements OnInit {
   resumeForm: FormGroup;
-  isCompleted = true;
+  @Input() isCompleted = true;
   loading = false;
 
-  constructor() {
+  constructor(private apiService: ApiService) {
   }
 
   ngOnInit() {
@@ -22,7 +23,12 @@ export class ResumeNameComponent implements OnInit {
   }
 
   createResume() {
-    // actual m data ko save kro using an api
-    this.isCompleted = true;
+    this.loading = true;
+    this.apiService.saveResume(this.resumeForm.value).subscribe(data => {
+      this.loading = false;
+      this.isCompleted = true;
+    }, error => {
+      this.loading = false;
+    });
   }
-  }
+}

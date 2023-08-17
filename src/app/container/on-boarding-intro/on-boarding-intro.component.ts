@@ -1,4 +1,5 @@
 import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-on-boarding-intro',
@@ -6,19 +7,9 @@ import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from "@angular/c
     styleUrls: ['on-boarding-intro.component.scss']
 })
 
-export class OnBoardingIntroComponent implements OnInit, OnChanges, DoCheck{
-    constructor(){}
-    ngOnInit(): void {
-        console.log('Called ng on init');
-    }
-
-    ngOnChanges(changes: SimpleChanges): void {
-        console.log(changes);
-        
-    }
-
-    ngDoCheck(): void {
-        console.log('called');
-        
-    }
+export class OnBoardingIntroComponent {
+    constructor(private router: Router){}
+    navigate() {
+        this.router.navigate(['on-boarding', 'add']);
+      }
 }

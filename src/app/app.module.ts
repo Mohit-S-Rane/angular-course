@@ -23,6 +23,7 @@ import { VerificationCompleted } from './guards/verification-completed';
 import { VerificationInCompleted } from './guards/verification-in-completed';
 import { OnBoardingComplete } from './guards/on-boarding-complete';
 import { OnBoardingIntroComponent } from './container/on-boarding-intro/on-boarding-intro.component';
+import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { OnBoardingIntroComponent } from './container/on-boarding-intro/on-board
     VerificationCompleted,
     VerificationInCompleted,
     OnBoardingComplete,
+    OnBoardingInComplete
   ],
   bootstrap: [AppComponent],
 })

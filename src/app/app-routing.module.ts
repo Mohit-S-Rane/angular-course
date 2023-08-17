@@ -12,6 +12,7 @@ import { VerificationInCompleted } from './guards/verification-in-completed';
 import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
 import { VerificationCompleted } from './guards/verification-completed';
 import { OnBoardingComplete } from './guards/on-boarding-complete';
+import { OnBoardingIntroComponent } from './container/on-boarding-intro/on-boarding-intro.component';
 
 // const routes: Routes = [{path: 'login', component: LoginComponent, canActivate: [AnonGuard]},
 // {path: 'signup', component: SignupComponent, canActivate: [AnonGuard]},
@@ -33,7 +34,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'verify', component: VerificationComponent, canActivate: [VerificationInCompleted] },
-      { path: 'on-boarding', component: OnBoardingComponent, canActivate: [VerificationCompleted, OnBoardingInComplete]},
+      { path: 'on-boarding', component: OnBoardingIntroComponent, canActivate: [VerificationCompleted, OnBoardingInComplete]},
+      { path: 'on-boarding/add', component: OnBoardingComponent, canActivate: [VerificationCompleted, OnBoardingInComplete]},
       { path: 'dashboard', component: DashboardComponent, canActivate: [VerificationCompleted, OnBoardingComplete]}
     ],
   },

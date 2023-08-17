@@ -1,20 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.alert-success{
-    background-color: #dff0d8;
-    border-color: #d0e9c6;
-    color: #3c763d;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.alert-error{
-    background-color: #f2dede;
-    border-color: #ebcccc;
-    color: #a94442;
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+    color: white !important;
+  }
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
 }
 
 .alert .mat-simple-snackbar {
-    justify-content: center;
+  justify-content: center;
 }

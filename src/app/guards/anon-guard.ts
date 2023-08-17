@@ -13,8 +13,10 @@ export class AnonGuard implements CanActivate {
         if(!AuthUtils.getAuthToken()){
             return true
         } else {
-            return this.apiService.fetchMe().pipe(map((data)=>{
-                this.router.navigate(['dashboard'])
+            console.log('im here with anon guard');
+            return this.router.navigate(['on-boarding'])
+            // return this.apiService.fetchMe().pipe(map((data)=>{
+                // this.router.navigate(['dashboard'])
                 // if(!data.verified){
                 //     this.router.navigate(['verify'])
                 // } else if(data.onboarding !== 200){
@@ -22,7 +24,8 @@ export class AnonGuard implements CanActivate {
                 // } else {
                 //     this.router.navigate(['dashboard'])
                 // }
-            }))
+            // }))
+
             // this.route.navigate(['verify'])
             // Conditions to navigate after login
                 // if verified: false -> verify

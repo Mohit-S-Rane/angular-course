@@ -6,13 +6,13 @@ import { SignupComponent } from './container/signup/signup.component';
 import { VerificationComponent } from './container/verification/verification.component';
 import { AnonGuard } from './guards/anon-guard';
 import { AuthGuard } from './guards/auth-guard';
-import { OnBoardingComponent } from './container/on-boarding/on-boarding.component';
 import { DashboardComponent } from './container/layout/dashboard/dashboard.component';
 import { VerificationInCompleted } from './guards/verification-in-completed';
 import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
 import { VerificationCompleted } from './guards/verification-completed';
 import { OnBoardingComplete } from './guards/on-boarding-complete';
-import { OnBoardingIntroComponent } from './container/on-boarding-intro/on-boarding-intro.component';
+import { OnBoardingIntroComponent } from './container/on-boarding/on-boarding-intro/on-boarding-intro.component';
+import { OnBoardingComponent } from './container/on-boarding/on-boarding/on-boarding.component';
 
 // const routes: Routes = [{path: 'login', component: LoginComponent, canActivate: [AnonGuard]},
 // {path: 'signup', component: SignupComponent, canActivate: [AnonGuard]},

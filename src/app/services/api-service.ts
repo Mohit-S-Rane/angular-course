@@ -4,6 +4,7 @@ import { User } from "../models/user";
 import { HttpService } from "./http-service";
 import { AuthUtils } from "../utility/auth-utils";
 import { Resume } from "../models/resume";
+import { InjectionToken } from '@angular/core'; 
 
 @Injectable()
 export class ApiService {
@@ -62,3 +63,5 @@ export class ApiService {
         return this.httpService.post('/resume/add/contactDetails/' + resumeId, data);
       }
 } 
+
+export const TEST_TOKEN = new InjectionToken('test_token')

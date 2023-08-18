@@ -8,7 +8,7 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http-service';
-import { ApiService } from './services/api-service';
+import { ApiService, TEST_TOKEN } from './services/api-service';
 import { AlertService } from './services/alert-service';
 import { LoginComponent } from './container/login/login.component';
 import { SignupComponent } from './container/signup/signup.component';
@@ -28,6 +28,7 @@ import { UploadComponent } from './container/on-boarding/tabs/upload/upload.comp
 import { ResumeFormComponent } from './container/resume-form/resume-form.component';
 import { ContactDetailsComponent } from './components/resume-form/resume-card/contact-details/contact-details.component';
 import { ContactDetailFormComponent } from './components/resume-form/resume-dialogues/contact-detail/contact-detail-form.component';
+import { TestService } from './services/test-service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,11 @@ import { ContactDetailFormComponent } from './components/resume-form/resume-dial
     VerificationCompleted,
     VerificationInCompleted,
     OnBoardingComplete,
-    OnBoardingInComplete
+    OnBoardingInComplete,
+    TestService,
+    // {provide: TEST_TOKEN, useValue: 'hello test token'},
+    // useFactory return arrow fuction
+    {provide: TEST_TOKEN, useFactory: () => 'hello factory test'},  
   ],
   bootstrap: [AppComponent],
 })

@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Inject, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Resume } from "src/app/models/resume";
-import { ApiService } from "src/app/services/api-service";
+import { ApiService, TEST_TOKEN } from "src/app/services/api-service";
+import { log } from 'console';
 
 @Component({
     selector: 'app-on-boarding',
@@ -14,7 +15,8 @@ export class OnBoardingComponent implements OnInit {
     isFirstStepCompleted = true;
     loading = false;
 
-    constructor(private apiService: ApiService) {
+    constructor(private apiService: ApiService, @Inject(TEST_TOKEN) private abc:any) {
+        console.log(abc)
     }
 
     ngOnInit() {

@@ -27,8 +27,10 @@ import { ResumeNameComponent } from './container/on-boarding/resume-name/resume-
 import { UploadComponent } from './container/on-boarding/tabs/upload/upload.componet';
 import { ResumeFormComponent } from './container/resume-form/resume-form.component';
 import { ContactDetailsComponent } from './components/resume-form/resume-card/contact-details/contact-details.component';
-import { ContactDetailFormComponent } from './components/resume-form/resume-dialogues/contact-detail/contact-detail-form.component';
+import { ContactDetailFormComponent } from './components/resume-form/resume-dialogues/contact-detail-form/contact-detail-form.component';
 import { TestService } from './services/test-service';
+import { EducationComponent } from './components/resume-form/resume-card/education/education.component';
+import { EducationFormComponent } from './components/resume-form/resume-dialogues/education-form/education-form.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { TestService } from './services/test-service';
     UploadComponent,
     ResumeFormComponent,
     ContactDetailsComponent,
-    ContactDetailFormComponent
+    ContactDetailFormComponent,
+    EducationComponent,
+    EducationFormComponent
   ],
   imports: [
     BrowserModule,

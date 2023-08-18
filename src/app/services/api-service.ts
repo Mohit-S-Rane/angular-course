@@ -62,6 +62,13 @@ export class ApiService {
       addContactDetails(resumeId: string, data:any) {
         return this.httpService.post('/resume/add/contactDetails/' + resumeId, data);
       }
+      addEducation(resumeId: string, data:any) {
+        return this.httpService.post('/resume/add/education/' + resumeId, data);
+      }
+    
+      updateEducation(educationId: string, data:any) {
+        return this.httpService.patch('/resume/add/education/' + educationId, data);
+      }
 } 
 
 export const TEST_TOKEN = new InjectionToken('test_token')

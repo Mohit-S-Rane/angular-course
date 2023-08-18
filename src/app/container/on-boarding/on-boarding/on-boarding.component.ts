@@ -11,19 +11,21 @@ import { ApiService } from "src/app/services/api-service";
 
 export class OnBoardingComponent implements OnInit {
     resume: Resume;
-    isFirstStepCompleted = false;
-    loading = true;
+    isFirstStepCompleted = true;
+    loading = false;
 
     constructor(private apiService: ApiService) {
     }
 
     ngOnInit() {
-        this.apiService.fetchAllResumes().subscribe(data => {
-            if (data.length) {
-                this.resume = data[0];
-                this.isFirstStepCompleted = true;
-                this.loading = false;
-            }
-        });
+        // this.apiService.fetchAllResumes().subscribe(data => {
+        //     if (data.length) {
+        //         this.resume = data[0];
+        //         this.isFirstStepCompleted = true;
+        //         this.loading = false;
+        //     }
+        // });
+        this.isFirstStepCompleted = true;
+        this.loading = false;
     }
 }

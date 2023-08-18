@@ -25,6 +25,7 @@ import { OnBoardingComplete } from './guards/on-boarding-complete';
 import { OnBoardingIntroComponent } from './container/on-boarding/on-boarding-intro/on-boarding-intro.component';
 import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
 import { ResumeNameComponent } from './container/on-boarding/resume-name/resume-name.component';
+import { UploadComponent } from './container/on-boarding/tabs/upload/upload.componet';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ResumeNameComponent } from './container/on-boarding/resume-name/resume-
     OnBoardingComponent,
     OnBoardingIntroComponent,
     DashboardComponent,
-    ResumeNameComponent
+    ResumeNameComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

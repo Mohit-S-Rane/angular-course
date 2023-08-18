@@ -3,9 +3,9 @@
     <ng-template matStepLabel>Name your Resume</ng-template>
     <app-resume-name [isCompleted]="isFirstStepCompleted"></app-resume-name>
   </mat-step>
-  <mat-step>
+  <mat-step *ngIf="this.isFirstStepCompleted" optional>
     <ng-template matStepLabel>Upload Video & Image</ng-template>
-    <p>Upload Video and image</p>
+    <app-upload></app-upload>
   </mat-step>
 </mat-horizontal-stepper>
 <div *ngIf="this.loading" style="height: 100vh" fxLayout="column" fxLayoutAlign="center center">

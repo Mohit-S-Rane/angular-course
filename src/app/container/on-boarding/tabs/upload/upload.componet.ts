@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { log } from 'console';
+import { Resume } from 'src/app/models/resume';
 import { ApiService } from 'src/app/services/api-service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from 'src/app/services/api-service';
   styleUrls: ['upload.componet.scss'],
 })
 export class UploadComponent implements OnInit, AfterViewInit {
-  @ViewChild('myTab') myTag: ElementRef;
+  @Input() resume: Resume;
 
   ngOnInit(): void {
 

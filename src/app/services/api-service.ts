@@ -39,4 +39,26 @@ export class ApiService {
     saveResume(data: { name: string }) {
         return this.httpService.post('/resume/add/resume', data);
     }
+
+    saveOrUpdateImage(image: File, resumeId: string): Observable<Resume> {
+        const formData = new FormData();
+        formData.append('profile_image', image);
+        return this.httpService.post('/resume/add/image/' + resumeId, formData);
+      }
+    
+      deleteImage(resumeId: string) {
+        return this.httpService.delete('/resume/delete/image/' + resumeId);
+      }
+    
+      addVideo(resumeId: string, data: { video_url: string }) {
+        return this.httpService.patch('/resume/import/video/' + resumeId, data);
+      }
+    
+      updateContactDetails(contactDetailId: string, data:any) {
+        return this.httpService.patch('/resume/update/contactDetails/' + contactDetailId, data);
+      }
+    
+      addContactDetails(resumeId: string, data:any) {
+        return this.httpService.post('/resume/add/contactDetails/' + resumeId, data);
+      }
 } 

@@ -17,7 +17,7 @@ export class UploadComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.elementRef.nativeElement); 
+    // console.log(this.elementRef.nativeElement); 
   }
 
   constructor(private elementRef: ElementRef) {}

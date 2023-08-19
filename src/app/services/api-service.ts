@@ -60,6 +60,9 @@ export class ApiService {
       }
     
       addContactDetails(resumeId: string, data:any) {
+        console.log('view data', data);
+        console.log('view resumeId', resumeId);
+        
         return this.httpService.post('/resume/add/contactDetails/' + resumeId, data);
       }
       addEducation(resumeId: string, data:any) {

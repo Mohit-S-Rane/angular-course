@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Resume } from "src/app/models/resume";
 
 @Component({
@@ -7,7 +7,15 @@ import { Resume } from "src/app/models/resume";
     styleUrls: ['resume-form.component.scss']
 })
 
-export class ResumeFormComponent{
+export class ResumeFormComponent implements OnInit{
     @Input() resume: Resume;
-    constructor(){}
+    constructor(){
+        console.log('fetch resume', this.resume);
+        
+    }
+
+    ngOnInit(): void {
+        console.log('log check', this.resume._id);
+        
+    }
 }

@@ -62,7 +62,8 @@ export class ContactDetailFormComponent implements OnInit {
   }
 
   save() {
-    const observer$ = this.apiService.addContactDetails(this.contactDetailForm.value, this.data.resumeId);
+    debugger
+    const observer$ = this.apiService.addContactDetails(this.data.resumeId, this.contactDetailForm.value);
     observer$.subscribe(data => {
       console.log(data);
     });

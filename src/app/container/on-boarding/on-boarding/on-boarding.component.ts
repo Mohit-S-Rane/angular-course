@@ -12,22 +12,19 @@ import { log } from 'console';
 
 export class OnBoardingComponent implements OnInit {
     resume: Resume;
-    isFirstStepCompleted = true;
-    loading = false;
-
-    constructor(private apiService: ApiService, @Inject(TEST_TOKEN) private abc:any) {
-        console.log(abc)
+    isFirstStepCompleted = false;
+    loading = true;
+  
+    constructor(private apiService: ApiService) {
     }
-
+  
     ngOnInit() {
-        // this.apiService.fetchAllResumes().subscribe(data => {
-        //     if (data.length) {
-        //         this.resume = data[0];
-        //         this.isFirstStepCompleted = true;
-        //         this.loading = false;
-        //     }
-        // });
-        this.isFirstStepCompleted = true;
-        this.loading = false;
+      this.apiService.fetchAllResumes().subscribe(data => {
+        if (data.length) {
+          this.resume = data[0];
+          this.isFirstStepCompleted = true;
+          this.loading = false;
+        }
+      });
     }
-}
+  }

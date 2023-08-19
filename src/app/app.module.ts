@@ -28,7 +28,6 @@ import { UploadComponent } from './container/on-boarding/tabs/upload/upload.comp
 import { ResumeFormComponent } from './container/resume-form/resume-form.component';
 import { ContactDetailsComponent } from './components/resume-form/resume-card/contact-details/contact-details.component';
 import { ContactDetailFormComponent } from './components/resume-form/resume-dialogues/contact-detail-form/contact-detail-form.component';
-import { TestService } from './services/test-service';
 import { EducationComponent } from './components/resume-form/resume-card/education/education.component';
 import { EducationFormComponent } from './components/resume-form/resume-dialogues/education-form/education-form.component';
 
@@ -70,7 +69,6 @@ import { EducationFormComponent } from './components/resume-form/resume-dialogue
     VerificationInCompleted,
     OnBoardingComplete,
     OnBoardingInComplete,
-    TestService,
     // {provide: TEST_TOKEN, useValue: 'hello test token'},
     // useFactory return arrow fuction
     {provide: TEST_TOKEN, useFactory: () => 'hello factory test'},  

@@ -26,10 +26,12 @@ import { OnBoardingInComplete } from './guards/on-boarding-in-complete';
 import { ResumeNameComponent } from './container/on-boarding/resume-name/resume-name.component';
 import { UploadComponent } from './container/on-boarding/tabs/upload/upload.componet';
 import { ResumeFormComponent } from './container/resume-form/resume-form.component';
-import { ContactDetailsComponent } from './components/resume-form/resume-card/contact-details/contact-details.component';
+import { ContactDetailsComponent } from './components/resume-form/contact-details/contact-details.component';
 import { ContactDetailFormComponent } from './components/resume-form/resume-dialogues/contact-detail-form/contact-detail-form.component';
-import { EducationComponent } from './components/resume-form/resume-card/education/education.component';
+import { EducationComponent } from './components/resume-form/education/education.component';
 import { EducationFormComponent } from './components/resume-form/resume-dialogues/education-form/education-form.component';
+import { EducationListComponent } from './components/resume-form/resume-list/education-list/education-list.component';
+import { EducationCardComponent } from './components/resume-form/resume-card/education-card/education-card.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { EducationFormComponent } from './components/resume-form/resume-dialogue
     ContactDetailsComponent,
     ContactDetailFormComponent,
     EducationComponent,
-    EducationFormComponent
+    EducationFormComponent,
+    EducationListComponent,
+    EducationCardComponent
   ],
   imports: [
     BrowserModule,

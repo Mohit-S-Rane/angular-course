@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { Education } from 'src/app/models/education';
-import { EducationFormComponent } from '../../resume-dialogues/education-form/education-form.component';
+import { EducationFormComponent } from '../resume-dialogues/education-form/education-form.component';
 
 @Component({
   selector: 'app-education',

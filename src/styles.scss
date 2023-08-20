@@ -27,6 +27,19 @@ body {
   transition: background 0.5s ease;
 }
 
+.resume-form-info-card-heading {
+  margin: 0 !important;;
+  font-weight: bold !important;
+}
+
+.resume-form-mat-icon-button {
+  margin-top: 2rem !important;
+}
+
+.resume-form-mat-icon {
+  font-size: 30px !important;
+}
+
 .cards-outer-div:hover .hover-container {
   display: block;
   background: rgba(0, 0, 0, 0.3);

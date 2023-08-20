@@ -72,6 +72,10 @@ export class ApiService {
       updateEducation(educationId: string, data:any) {
         return this.httpService.patch('/resume/add/education/' + educationId, data);
       }
+
+      deleteEducation(educationId: string) {
+        return this.httpService.delete('/resume/delete/education/' + educationId);
+      }
 } 
 
 export const TEST_TOKEN = new InjectionToken('test_token')

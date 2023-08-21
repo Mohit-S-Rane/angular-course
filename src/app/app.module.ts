@@ -72,6 +72,10 @@ import { StrengthComponent } from './components/resume-form/strength/strength.co
 import { StrengthFormComponent } from './components/resume-form/resume-dialogues/strength-form/strength-form.component';
 import { StrengthListComponent } from './components/resume-form/resume-list/strength-list/strength-list.component';
 import { StrengthCardComponent } from './components/resume-form/resume-card/strength-card/strength-card.component';
+import { WeaknessComponent } from './components/resume-form/weakness/weakness.component';
+import { WeaknessFormComponent } from './components/resume-form/resume-dialogues/weakness-form/weakness-form.component';
+import { WeaknessListComponent } from './components/resume-form/resume-list/weakness-list/weakness-list.component';
+import { WeaknessCardComponent } from './components/resume-form/resume-card/weakness-card/weakness-card.component';
 
 @NgModule({
   declarations: [
@@ -142,7 +146,12 @@ import { StrengthCardComponent } from './components/resume-form/resume-card/stre
     StrengthComponent,
     StrengthFormComponent,
     StrengthListComponent,
-    StrengthCardComponent
+    StrengthCardComponent,
+
+    WeaknessComponent,
+    WeaknessFormComponent,
+    WeaknessListComponent,
+    WeaknessCardComponent
 
   ],
   imports: [

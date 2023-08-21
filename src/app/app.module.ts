@@ -48,6 +48,14 @@ import { SkillsComponent } from './components/resume-form/skills/skills.componen
 import { SkillFormComponent } from './components/resume-form/resume-dialogues/skill-form/skill-form.component';
 import { SkillListComponent } from './components/resume-form/resume-list/skill-list/skill-list.component';
 import { SkillCardComponent } from './components/resume-form/resume-card/skill-card/skill-card.component';
+import { LanguageComponent } from './components/resume-form/language/language.component';
+import { LanguageFormComponent } from './components/resume-form/resume-dialogues/language-form/language-form.component';
+import { LanguageListComponent } from './components/resume-form/resume-list/language-list/language-list.component';
+import { LanguageCardComponent } from './components/resume-form/resume-card/language-card/language-card.component';
+import { IndustrialExposureComponent } from './components/resume-form/industrial-exposure/industrial-exposure.component';
+import { IndustrialExposureFormComponent } from './components/resume-form/resume-dialogues/industrial-exposure-form/industrial-exposure-form.component';
+import { IndustrialExposureListComponent } from './components/resume-form/resume-list/industrial-exposure-list/industrial-exposure-list.component';
+import { IndustrialExposureCardComponent } from './components/resume-form/resume-card/industrial-exposure-card/industrial-exposure-card.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +96,17 @@ import { SkillCardComponent } from './components/resume-form/resume-card/skill-c
     SkillsComponent,
     SkillFormComponent,
     SkillListComponent,
-    SkillCardComponent
+    SkillCardComponent,
+
+    LanguageComponent,
+    LanguageFormComponent,
+    LanguageListComponent,
+    LanguageCardComponent,
+
+    IndustrialExposureComponent,
+    IndustrialExposureFormComponent,
+    IndustrialExposureListComponent,
+    IndustrialExposureCardComponent
 
   ],
   imports: [

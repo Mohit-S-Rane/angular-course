@@ -44,6 +44,10 @@ import { InterestComponent } from './components/resume-form/interest/interest.co
 import { InterestFormComponent } from './components/resume-form/resume-dialogues/interest-form/interest-form.component';
 import { InterestListComponent } from './components/resume-form/resume-list/interest-list/interest-list.component';
 import { InterestCardComponent } from './components/resume-form/resume-card/interest-card/interest-card.component';
+import { SkillsComponent } from './components/resume-form/skills/skills.component';
+import { SkillFormComponent } from './components/resume-form/resume-dialogues/skill-form/skill-form.component';
+import { SkillListComponent } from './components/resume-form/resume-list/skill-list/skill-list.component';
+import { SkillCardComponent } from './components/resume-form/resume-card/skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +83,12 @@ import { InterestCardComponent } from './components/resume-form/resume-card/inte
     InterestComponent,
     InterestFormComponent,
     InterestListComponent,
-    InterestCardComponent
+    InterestCardComponent,
+
+    SkillsComponent,
+    SkillFormComponent,
+    SkillListComponent,
+    SkillCardComponent
 
   ],
   imports: [

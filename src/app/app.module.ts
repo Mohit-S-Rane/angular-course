@@ -56,6 +56,10 @@ import { IndustrialExposureComponent } from './components/resume-form/industrial
 import { IndustrialExposureFormComponent } from './components/resume-form/resume-dialogues/industrial-exposure-form/industrial-exposure-form.component';
 import { IndustrialExposureListComponent } from './components/resume-form/resume-list/industrial-exposure-list/industrial-exposure-list.component';
 import { IndustrialExposureCardComponent } from './components/resume-form/resume-card/industrial-exposure-card/industrial-exposure-card.component';
+import { ObjectiveComponent } from './components/resume-form/objective/objective.component';
+import { ObjectiveFormComponent } from './components/resume-form/resume-dialogues/objective-form/objective-form.component';
+import { ObjectiveListComponent } from './components/resume-form/resume-list/objective-list/objective-list.component';
+import { ObjectiveCardComponent } from './components/resume-form/resume-card/objective-card/objective-card.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +110,12 @@ import { IndustrialExposureCardComponent } from './components/resume-form/resume
     IndustrialExposureComponent,
     IndustrialExposureFormComponent,
     IndustrialExposureListComponent,
-    IndustrialExposureCardComponent
+    IndustrialExposureCardComponent,
+
+    ObjectiveComponent,
+    ObjectiveFormComponent,
+    ObjectiveListComponent,
+    ObjectiveCardComponent
 
   ],
   imports: [

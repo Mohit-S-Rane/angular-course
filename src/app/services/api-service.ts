@@ -76,6 +76,14 @@ export class ApiService {
       deleteEducation(educationId: string) {
         return this.httpService.delete('/resume/delete/education/' + educationId);
       }
+
+      addEmploymentHistory(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/employmentHistory/' + resumeId, data);
+      }
+    
+      updateEmploymentHistory(data: any, employmentId: string) {
+        return this.httpService.patch('/resume/update/employmentHistory/' + employmentId, data);
+      }
 } 
 
 export const TEST_TOKEN = new InjectionToken('test_token')

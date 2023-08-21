@@ -32,6 +32,10 @@ import { EducationComponent } from './components/resume-form/education/education
 import { EducationFormComponent } from './components/resume-form/resume-dialogues/education-form/education-form.component';
 import { EducationListComponent } from './components/resume-form/resume-list/education-list/education-list.component';
 import { EducationCardComponent } from './components/resume-form/resume-card/education-card/education-card.component';
+import { EmploymentHistoryComponent } from './components/resume-form/employment-history/employment-history.component';
+import { EmploymentHistoryListComponent } from './components/resume-form/resume-list/employment-history-list/employment-history-list.component';
+import { EmploymentHistoryCardComponent } from './components/resume-form/resume-card/employment-history-card/employment-history-card.component';
+import { EmploymentHistoryFormComponent } from './components/resume-form/resume-dialogues/employment-history-form/employment-history-form.component';
 
 @NgModule({
   declarations: [
@@ -48,10 +52,17 @@ import { EducationCardComponent } from './components/resume-form/resume-card/edu
     ResumeFormComponent,
     ContactDetailsComponent,
     ContactDetailFormComponent,
+
     EducationComponent,
     EducationFormComponent,
     EducationListComponent,
-    EducationCardComponent
+    EducationCardComponent,
+
+    EmploymentHistoryComponent,
+    EmploymentHistoryFormComponent,
+    EmploymentHistoryListComponent,
+    EmploymentHistoryCardComponent
+
   ],
   imports: [
     BrowserModule,

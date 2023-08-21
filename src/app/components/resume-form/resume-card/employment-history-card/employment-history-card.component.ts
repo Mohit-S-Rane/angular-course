@@ -23,9 +23,9 @@ export class EmploymentHistoryCardComponent {
     }
 
     delete() {
-        // this.apiService.deleteEducation(this.employmentHistory._id)
-        //     .subscribe(data => {
-        //         this.alertService.success('employmentHistory deleted Successfully');
-        //     });
+        this.apiService.deleteEmploymentHistory(this.employmentHistory._id)
+            .subscribe(data => {
+                this.alertService.success('employmentHistory deleted Successfully');
+            });
     }
 }

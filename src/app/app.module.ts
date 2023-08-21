@@ -36,6 +36,10 @@ import { EmploymentHistoryComponent } from './components/resume-form/employment-
 import { EmploymentHistoryListComponent } from './components/resume-form/resume-list/employment-history-list/employment-history-list.component';
 import { EmploymentHistoryCardComponent } from './components/resume-form/resume-card/employment-history-card/employment-history-card.component';
 import { EmploymentHistoryFormComponent } from './components/resume-form/resume-dialogues/employment-history-form/employment-history-form.component';
+import { AwardComponent } from './components/resume-form/award/awards-achivement.component';
+import { AwardFormComponent } from './components/resume-form/resume-dialogues/award-form/award-form.component';
+import { AwardListComponent } from './components/resume-form/resume-list/award-list/award-list.component';
+import { AwardCardComponent } from './components/resume-form/resume-card/award-card/award-card.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,12 @@ import { EmploymentHistoryFormComponent } from './components/resume-form/resume-
     EmploymentHistoryComponent,
     EmploymentHistoryFormComponent,
     EmploymentHistoryListComponent,
-    EmploymentHistoryCardComponent
+    EmploymentHistoryCardComponent,
+
+    AwardComponent,
+    AwardFormComponent,
+    AwardListComponent,
+    AwardCardComponent
 
   ],
   imports: [

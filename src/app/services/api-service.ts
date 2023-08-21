@@ -84,6 +84,127 @@ export class ApiService {
       updateEmploymentHistory(data: any, employmentId: string) {
         return this.httpService.patch('/resume/update/employmentHistory/' + employmentId, data);
       }
+
+      deleteEmploymentHistory(employmentId: string) {
+        return this.httpService.delete('/resume/delete/employmentHistory/' + employmentId);
+      }
+
+      addInterest(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/interest/' + resumeId, data);
+      }
+    
+      updateInterest(data: any, interestId: string) {
+        return this.httpService.patch('/resume/update/interest/' + interestId, data);
+      }
+    
+      addSkill(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/skill/' + resumeId, data);
+      }
+    
+      updateSkill(data: any, skillId: string) {
+        return this.httpService.patch('/resume/update/skill/' + skillId, data);
+      }
+    
+      deleteSkill(skillId: string) {
+        return this.httpService.delete('/resume/delete/skill/' + skillId);
+      }
+    
+      addLanguage(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/language/' + resumeId, data);
+    
+      }
+    
+      updateLanguage(data: any, languageId: string) {
+        return this.httpService.patch('/resume/update/language/' + languageId, data);
+      }
+    
+      deleteLanguage(languageId: string) {
+        return this.httpService.delete('/resume/delete/language/' + languageId);
+      }
+    
+      addIndustrialExposure(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/industrialExposure/' + resumeId, data);
+      }
+    
+      updateIndustrialExposure(data: any, industrialExposureId: string) {
+        return this.httpService.patch('/resume/update/industrialExposure/' + industrialExposureId, data);
+      }
+    
+      deleteIndustrialExposure(industrialExposureId: string) {
+        return this.httpService.delete('/resume/delete/industrialExposure/' + industrialExposureId);
+      }
+    
+      addAward(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/award/' + resumeId, data);
+      }
+    
+      updateAward(data: any, awardId: string) {
+        return this.httpService.patch('/resume/update/awardAchivements/' + awardId, data);
+      }
+    
+      deleteAward(awardId: string) {
+        return this.httpService.delete('/resume/delete/awardAchivements/' + awardId);
+      }
+    
+      addObjective(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/objective/' + resumeId, data);
+      }
+    
+      updateObjective(data: any, objectiveId: string) {
+        return this.httpService.patch('/resume/update/objective/' + objectiveId, data);
+      }
+    
+      deleteObjective(objectiveId: string) {
+        return this.httpService.delete('/resume/delete/objective/' + objectiveId);
+      }
+    
+      addReference(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/refrence/' + resumeId, data);
+      }
+    
+      updateReference(data: any, referenceId: string) {
+        return this.httpService.patch('/resume/update/refrence/' + referenceId, data);
+      }
+    
+      deleteReference(referenceId: string) {
+        return this.httpService.delete('/resume/delete/refrence/' + referenceId);
+      }
+    
+      addProjectDetail(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/projectDetail/' + resumeId, data);
+      }
+    
+      updateProjectDetail(data: any, projectDetailId: string) {
+        return this.httpService.patch('/resume/update/projectDetail/' + projectDetailId, data);
+      }
+    
+      deleteProjectDetail(projectDetailId: string) {
+        return this.httpService.delete('/resume/delete/projectDetail/' + projectDetailId);
+      }
+    
+      addStrength(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/strength/' + resumeId, data);
+      }
+    
+      updateStrength(data: any, strengthId: string) {
+        return this.httpService.patch('/resume/update/strength/' + strengthId, data);
+      }
+    
+      deleteStrength(strengthId: string) {
+        return this.httpService.delete('/resume/delete/strength/' + strengthId);
+      }
+    
+      addWeakness(data: any, resumeId: string) {
+        return this.httpService.post('/resume/add/weakness/' + resumeId, data);
+      }
+    
+      deleteWeakness(weaknessId: string) {
+        return this.httpService.delete('/resume/delete/weakness/' + weaknessId);
+      }
+    
+      updateWeakness(data: any, weaknessId: string) {
+        return this.httpService.patch('/resume/update/weakness/' + weaknessId, data);
+      }
 } 
 
 export const TEST_TOKEN = new InjectionToken('test_token')

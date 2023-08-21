@@ -11,7 +11,7 @@ import { EmploymentHistoryFormComponent } from '../resume-dialogues/employment-h
 
 export class EmploymentHistoryComponent {
   @Input() resumeId: string;
-  @Input() employmentHistory: EmploymentHistory[];
+  @Input() employmentHistories: EmploymentHistory[];
 
   constructor(private matDialog: MatDialog) {
   }

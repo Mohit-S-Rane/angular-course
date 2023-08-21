@@ -80,6 +80,10 @@ export class ApiService {
       addEmploymentHistory(data: any, resumeId: string) {
         return this.httpService.post('/resume/add/employmentHistory/' + resumeId, data);
       }
+
+      deleteInterest(interestId: string) {
+        return this.httpService.delete('/resume/delete/interest/' + interestId);
+      }
     
       updateEmploymentHistory(data: any, employmentId: string) {
         return this.httpService.patch('/resume/update/employmentHistory/' + employmentId, data);

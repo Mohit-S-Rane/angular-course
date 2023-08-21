@@ -6,7 +6,7 @@ import { EducationFormComponent } from '../resume-dialogues/education-form/educa
 @Component({
   selector: 'app-education',
   templateUrl: 'education.component.html',
-  styleUrls: ['education.component.html']
+  styleUrls: ['education.component.scss']
 })
 
 export class EducationComponent {

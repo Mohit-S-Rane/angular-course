@@ -40,6 +40,10 @@ import { AwardComponent } from './components/resume-form/award/awards-achivement
 import { AwardFormComponent } from './components/resume-form/resume-dialogues/award-form/award-form.component';
 import { AwardListComponent } from './components/resume-form/resume-list/award-list/award-list.component';
 import { AwardCardComponent } from './components/resume-form/resume-card/award-card/award-card.component';
+import { InterestComponent } from './components/resume-form/interest/interest.component';
+import { InterestFormComponent } from './components/resume-form/resume-dialogues/interest-form/interest-form.component';
+import { InterestListComponent } from './components/resume-form/resume-list/interest-list/interest-list.component';
+import { InterestCardComponent } from './components/resume-form/resume-card/interest-card/interest-card.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +74,12 @@ import { AwardCardComponent } from './components/resume-form/resume-card/award-c
     AwardComponent,
     AwardFormComponent,
     AwardListComponent,
-    AwardCardComponent
+    AwardCardComponent,
+
+    InterestComponent,
+    InterestFormComponent,
+    InterestListComponent,
+    InterestCardComponent
 
   ],
   imports: [
